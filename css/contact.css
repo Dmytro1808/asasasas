@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --link-color: inherit;
+  --visited-color: inherit;
+}
+
+a.text {
+  text-decoration: none;
+  color: var(--link-color);
+}
+a.text:active {
+  color: #f1683a;
+}
+a.text:active + #relocate {
+  color: #f1683a;
+}
+.page-load-time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: #f1683a;
+  left: 0;
+  top: 0;
+  animation: runningTime 1.5s linear 1 forwards;
+}
+
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+.contact-bg h3,
+.contact-bg h2,
+.contact-bg .text {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 1s 1s linear 1 forwards;
+}
+.iframe {
+  width: 100%;
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.contact-bg h3 {
+  animation-delay: 0.5s !important;
+}
+.contact-bg h2 {
+  animation-delay: 0.8s !important;
+}
+.contact-bg h2 {
+  animation-delay: 1.1s !important;
+}
+body {
+  font-family: "Open-Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.contact-bg {
+  height: 40vh;
+  background-image: url(../img/contact-page/ireland_major.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+/* container-nav */
+.container-nav .nav a:hover {
+  color: #f1683a;
+}
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  font-size: 19px;
+}
+
+.container-nav .nav a {
+  color: #eee;
+  font-family: Poppins;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.contact-bg h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.contact-bg h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0;
+  letter-spacing: 4px;
+}
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.line div {
+  margin: 0.02rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3) {
+  height: 3px;
+  background: #f1683a;
+  border-radius: 5px;
+}
+.line div:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  background: #f1683a;
+  border-radius: 50%;
+}
+.text {
+  font-weight: 300;
+  opacity: 0.9;
+  font-size: 20px;
+}
+.contact-bg .text {
+  margin: 1.6rem 0;
+}
+.contact-body {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.contact-info {
+  margin: 2rem 0;
+  text-align: center;
+  padding: 2rem 0;
+}
+.contact-info span {
+  display: block;
+}
+.contact-info div {
+  margin: 0.8rem 0;
+  padding: 1rem;
+}
+
+.contact-info span .fas {
+  font-size: 2rem;
+  padding-bottom: 0.9rem;
+  color: #f1683a;
+}
+.contact-info div span:nth-child(2) {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.contact-info text {
+  padding-top: 0.4rem;
+}
+.contact-form {
+  padding: 2rem 0 1rem;
+  border-top: 1px solid #c7c7c7;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container-form {
+  text-align: center;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.wrapper-alert {
+  display: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  width: 500px;
+  color: #fff;
+  background: #f1683a;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  margin-bottom: 20px;
+}
+.contact-form form {
+  padding-bottom: 1rem;
+}
+.form-control {
+  width: 100%;
+  border: 1.5px solid #c7c7c7;
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  outline: 0;
+}
+.form-control:focus {
+  box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+}
+.contact-form form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.6rem;
+}
+.send-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: #f1683a;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+}
+.send-btn:hover {
+  opacity: 0.8;
+}
+.send-btn:active {
+  transform: translateY(2px);
+}
+.contact-form > div {
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-form > div img {
+  width: 85%;
+}
+.contact-footer {
+  padding: 2rem 0;
+  background: #000;
+}
+.contact-footer h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+.social-links a {
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  transition: all 0.2s ease;
+}
+.social-links a:hover {
+  color: #f1683a;
+  border-color: #f1683a;
+}
+.map {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .contact-bg .text {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-bg .text {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-bg h2 {
+    font-size: 1.9rem;
+  }
+  .text {
+    font-size: 19px;
+  }
+  .social-links a {
+    width: 30px;
+    height: 30px;
+  }
+  .contact-footer h3 {
+    font-size: 1.1rem;
+  }
+  .contact-footer {
+    padding: 1rem 0;
+  }
+  .nav {
+    font-size: 15px;
+  }
+  .contact-bg h3 {
+    margin-top: 50px;
+  }
+}
